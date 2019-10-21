@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="app" class="app">
+    <!-- 控制区 开始 -->
+    <div class="control">
+      <div class="c_head">
+        <div class="ch_title">
+          色谱设置
+        </div>
+      </div>
+      <div class="c_body">
+        <!-- 数值样式 开始 -->
+        <section class="cb_numStyleBox">
+          <span class="cb_title">数值样式</span>
+          <label class="cbn_calipers"><input type="radio" checked name="numStyle" value="calipers">卡尺式</label>
+          <label class="cbn_center"><input type="radio" name="numStyle" value="center">居中式</label>
+        </section>
+        <!-- 数值样式 结束 -->
+        <!-- 排列样式 开始 -->
+        <section class="cb_arrayStyleBox">
+          <span class="cb_title">排列样式</span>
+          <section>
+            <label class="cba_vertical">
+              <input type="radio" value="vertical" checked name="arrayStyle">竖排
+            </label>
+            数值在
+            <div class="cba_contrul c_active">
+              <div>左</div>
+              <div class="active">右</div>
+            </div>
+          </section>
+          <section>
+            <label class="cba_across">
+              <input type="radio" value="across" name="arrayStyle">横排
+            </label>
+            数值在
+            <div class="cba_contrul">
+              <div>上</div>
+              <div class="active">下</div>
+            </div>
+          </section>
+        </section>
+        <!-- 排列样式 结束 -->
+        <!-- 单色块的长宽 开始 -->
+        <section id="cb_oneAttr" class="cb_oneAttr">
+          <span class="cb_title">单色块的长宽</span>
+          <div>
+            <span>长 <input name='height' type="text" value="38px"></span>
+            <span>宽 <input name='width' type="text" value="15px"></span>
+          </div>
+        </section>
+        <!-- 单色块的长宽 结束 -->
+      </div>
+    </div>
+    <!-- 控制区 结束 -->
+    <!-- 展示区 开始 -->
+    <div id="view" class="view">
+      <section id="v_box" class="v_box">
+          <section id="v_unit" class="v_unit">单位：mm</section>
+          <ul id="v_bricks" class="v_bricks">
+          </ul>
+      </section>
+    </div>
+    <!-- 展示区 结束 -->
+  </div>
+</body>
+<script src="./js/jquery-3.4.1.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

@@ -1,0 +1,237 @@
+/* common start */
+html,
+body,
+ul,
+li,
+div,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 14px;
+  color: #000;
+  font-family: "Microsoft Ya Hei";
+}
+
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+input[type='radio']:checked {
+  background: #1673ff;
+}
+
+input[type='radio'] {
+  width: 12px;
+  height: 12px;
+  border: solid 1px #dddddd;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 4px;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  background: transparent;
+  border: #fff solid 2px;
+  border-top: none;
+  border-right: none;
+  height: 3px;
+  width: 5px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+/* common end */
+
+.app {
+  padding: 15px;
+  position: relative;
+}
+/* control start */
+.control {
+  width: 265px;
+  height: 217px;
+  box-shadow: 0 0 20px #b7b2b2;
+  position: absolute;
+}
+
+.c_head {
+  width: 100%;
+  height: 32px;
+  background: #e7f4f7;
+}
+
+.ch_title {
+  width: 72px;
+  height: 100%;
+  line-height: 32px;
+  text-align: center;
+  background: #36a4eb;
+  color: #fff;
+  position: relative;
+}
+
+.ch_title::after {
+  content: '';
+  border: 3px solid transparent;
+  border-left-color: #36a4eb;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  margin-top: -3px;
+}
+
+.c_body {
+  padding: 0 10px;
+  background: #f8feff;
+}
+/* 数字样式 start */
+.cb_numStyleBox {
+  height: 32px;
+  width: 100%;
+  line-height: 32px;
+  border-bottom: 1px dashed #afb1b2;
+}
+
+.cb_title {
+  border-left: 3px solid #e98e4c;
+  padding-left: 6px;
+
+}
+
+.cbn_calipers {
+  margin: 0 25px 0 20px;
+}
+/* 数字样式 end */
+/* 排列样式 start */
+.cb_arrayStyleBox {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.cb_arrayStyleBox section {
+  display: flex;
+  margin: 2px;
+}
+.cb_arrayStyleBox section .cba_contrul {
+  display: flex;
+  padding: 1px;
+  cursor: pointer;
+  background: #38a7f0;
+}
+.cba_contrul div {
+  flex: 1;
+  color: #fff;
+}
+.cba_contrul .active {
+  background: #fff;
+  color: #7e7e7e;
+}
+.cba_vertical,
+.cba_across {
+  margin-right: 20px;
+}
+.cba_contrul {
+  margin-left: 5px;
+}
+.cba_contrul div {
+  width: 20px;
+  height: 100%;
+  text-align: center;
+}
+/* 排列样式 end */
+/* 单色块长和宽 start */
+.cb_oneAttr {
+  padding: 8px 0;
+}
+.cb_oneAttr div {
+  margin-top: 5px;
+}
+.cb_oneAttr div span {
+  margin-left: 10px;
+}
+.cb_oneAttr input {
+  width: 37px;
+  height: 20px;
+}
+/* 单色块长和宽 end */
+/* control end */
+/* view start */
+.view {
+  margin-left: 350px;
+  margin-top: 35px;
+  width: max-content;
+}
+.v_unit {
+  width: 70px;
+  text-align: center;
+}
+.v_bricks li {
+  width: 15px;
+  height: 38px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+}
+.v_bricks .vb_vertical{
+  border-top: none;
+}
+.v_bricks .vb_across {
+  border-left: none;
+}
+.v_bricks .vb_vertical:first {
+  border-top: 1px solid #000;;
+}
+.v_bricks .vb_across:last-child {
+  border-left: 1px solid #000;;
+}
+.v_bricks li span {
+  position: absolute;
+}
+.v_bricks li .vb_vertical_calipers {
+  bottom: -10px;
+}
+
+.v_bricks li .vb_vertical_center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.v_bricks li .vb_right{
+  right: -25px;
+}
+.v_bricks li .vb_left{
+  left: -25px;
+}
+.v_bricks li .vb_across_calipers {
+  left: -10px;
+}
+.v_bricks li .vb_across_center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.v_bricks li .vb_top{
+  top: -25px;
+}
+.v_bricks li .vb_bottom{
+  bottom: -25px;
+}
+/* view end */
